@@ -4,8 +4,7 @@ let pacientes = document.querySelectorAll(".paciente");
 
 function printTable(){
 
-  for(let i = 0; i < pacientes.length ; i++) {
-    let paciente = pacientes[i];
+  pacientes.forEach(paciente => {
 
     let tdImc = paciente.querySelector(".info-imc");
     let peso = paciente.querySelector(".info-peso").textContent;
@@ -20,8 +19,7 @@ function printTable(){
     } else {
       paciente.classList.add("paciente-invalido")
     }
-
-  }
+  })
 }
 
 const form = document.querySelector("#form_adicionar");
